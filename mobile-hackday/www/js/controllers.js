@@ -90,7 +90,7 @@ angular.module('starter')
         }
 
         $scope.checkout = function(){
-            $state.go(app.cart);
+            $state.go('app.cart');
         }
 
 
