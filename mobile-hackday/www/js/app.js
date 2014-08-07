@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'openfb', 'starter.controllers'])
+angular.module('starter', ['ionic', 'openfb', 'starter.controllers',"firebase"])
 
     .run(function ($rootScope, $state, $ionicPlatform, $window, OpenFB) {
 
