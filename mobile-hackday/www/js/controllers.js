@@ -47,16 +47,17 @@ angular.module('starter')
 
     })
 
-    .controller('ListingsCtrl', function ($scope, OpenFB, geolocation) {
+    .controller('ListingsCtrl', function ($scope, OpenFB, geolocation, listingsFactory) {
 
         OpenFB.get('/me').success(function (user) {
             $scope.user = user;
         });
 
-        geolocation.getLocation().then(function (data){
-            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
-            console.log(data.coords.latitude);
-        });
+
+//        geolocation.getLocation().then(function (data){
+//            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
+//            console.log(data.coords.latitude);
+//        });
 
 //        $scope.item = {};
 //

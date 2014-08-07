@@ -19,6 +19,18 @@
                     </div>
                 </div>
             </div>
+            <div class="col">
+                <div class="list card">
+                    <div class="item">
+                        <h2>{{user.name}}</h2>
+                        <p>{{user.email}}</p>
+                        <p>LAT: {{coords.lat}} Long: {{coords.long}}</p>
+                    </div>
+                    <div class="item item-image">
+                        <img ng-src="https://graph.facebook.com/{{ user.id }}/picture?width=400&height=400" />
+                    </div>
+                </div>
+            </div>
         </div>
 
 

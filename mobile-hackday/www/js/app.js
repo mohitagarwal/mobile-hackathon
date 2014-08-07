@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
+angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation', 'listingsFactory'])
 
     .run(function ($rootScope, $state, $ionicPlatform, $window, OpenFB) {
 
