@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation', 'listingsFactory'])
+angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
 
     .run(function ($rootScope, $state, $ionicPlatform, $window, OpenFB) {
 
@@ -59,16 +59,6 @@ angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation', 'listin
                     'menuContent': {
                         templateUrl: "templates/listings.html",
                         controller: "ListingsCtrl"
-                    }
-                }
-            })
-
-            .state('app.profile', {
-                url: "/profile",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/profile.html",
-                        controller: "ProfileCtrl"
                     }
                 }
             });
