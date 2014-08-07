@@ -1,1 +1,5 @@
 node_modules/
+.idea
+platforms/
+plugins/android.json
+plugins/ios.json
