@@ -1,0 +1,27 @@
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes.dex : \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$1.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard$2.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionic/keyboard/IonicKeyboard.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionicframework/mobilehackday472967/BuildConfig.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionicframework/mobilehackday472967/mobilehackday.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionicframework/mobilehackday472967/R$attr.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionicframework/mobilehackday472967/R$drawable.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionicframework/mobilehackday472967/R$string.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionicframework/mobilehackday472967/R$xml.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/com/ionicframework/mobilehackday472967/R.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$1.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$2.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$3.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4$1.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$4.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$1.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$2.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$3.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5$4.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$5.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser$InAppBrowserClient.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowser.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppBrowserDialog.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/classes/org/apache/cordova/inappbrowser/InAppChromeClient.class \
+/Users/mohit.tibrewal/Desktop/mobile-hackathon/mobile-hackday/platforms/android/ant-build/dexedLibs/classes-44c78840887c556ff4e01d9d2841e046.jar \

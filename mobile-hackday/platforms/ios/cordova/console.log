@@ -1,0 +1,12 @@
+2014-08-07 23:29:14.649 mobile-hackday[57074:70b] Multi-tasking -> Device: YES, App: YES
+2014-08-07 23:29:14.673 mobile-hackday[57074:70b] Unlimited access to network resources
+2014-08-07 23:29:14.807 mobile-hackday[57074:70b] [CDVTimer][keyboard] 0.055015ms
+2014-08-07 23:29:14.808 mobile-hackday[57074:70b] CDVPlugin class CDVStatusBar (pluginName: statusbar) does not exist.
+2014-08-07 23:29:14.808 mobile-hackday[57074:70b] [CDVTimer][statusbar] 0.373006ms
+2014-08-07 23:29:14.808 mobile-hackday[57074:70b] [CDVTimer][TotalPluginStartup] 1.277030ms
+2014-08-07 23:29:14.943 mobile-hackday[57074:70b] Resetting plugins due to page load.
+2014-08-07 23:29:15.165 mobile-hackday[57074:70b] Finished load of: file:///Users/mohit.tibrewal/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/B92769D1-737B-4FCD-BD11-60E0D39C823E/mobile-hackday.app/www/index.html#/app/login
+2014-08-07 23:29:16.524 mobile-hackday[57074:70b] Setting the WebView's frame to {{0, 0}, {320, 436}}
+2014-08-07 23:29:16.533 mobile-hackday[57074:70b] THREAD WARNING: ['InAppBrowser'] took '50.209961' ms. Plugin should use a background thread.
+2014-08-07 23:29:20.570 mobile-hackday[57074:70b] webView:didFailLoadWithError - -999: The operation couldn’t be completed. (NSURLErrorDomain error -999.)
+2014-08-07 23:29:55.779 mobile-hackday[57074:70b] 37.785834
