@@ -4,11 +4,12 @@
 
 angular.module('starter')
     .service('listingsFactory', ['$scope', '$firebase', function($scope, $firebase) {
-        this.getListings = function(){
+        this.getListingsForCustomer = function(){
             return {
                 "L1111" :{
                     price : 100,
-                    image: "img.png"
+                    image: "img.png",
+                    name: "Sabzi"
                 }
             }
         }
