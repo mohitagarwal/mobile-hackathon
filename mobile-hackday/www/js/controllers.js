@@ -25,7 +25,7 @@ angular.module('starter.controllers', ['geolocation'])
 
             OpenFB.login('email,read_stream,publish_stream').then(
                 function () {
-                    $location.path('/app/profile');
+                    $location.path('/app/listings');
                 },
                 function () {
                     alert('OpenFB login failed');
@@ -34,7 +34,7 @@ angular.module('starter.controllers', ['geolocation'])
 
     })
 
-    .controller('LandingCtrl', function ($scope, OpenFB) {
+    .controller('ListingsCtrl', function ($scope, OpenFB) {
 
 //        $scope.item = {};
 //

@@ -53,6 +53,16 @@ angular.module('starter', ['ionic', 'openfb', 'starter.controllers'])
                 }
             })
 
+            .state('app.listings', {
+                url: "/listings",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/listings.html",
+                        controller: "ListingsCtrl"
+                    }
+                }
+            })
+
             .state('app.profile', {
                 url: "/profile",
                 views: {
