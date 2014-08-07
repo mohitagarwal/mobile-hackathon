@@ -9,7 +9,7 @@
 
         <div class="row">
             <div class="col">
-                <h1>Onions : Rs. 35 per kg</h1>
+                <h1>{{item.name}} : Rs. {{item.price}} per kg</h1>
             </div>
         </div>
 
@@ -21,7 +21,7 @@
                 <div class="list card">
                     <div class="item item-input-inset">
                         <label>
-                            <input type="number">
+                            <input type="number" ng-model="veg.quantity">
                         </label>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
 
         <div class="row">
             <div class="col">
-                <h1>Cost : Rs. 35</h1>
+                <h3>Cost : Rs. {{item.price}}</h3>
             </div>
         </div>
 

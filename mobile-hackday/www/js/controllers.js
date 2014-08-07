@@ -68,10 +68,11 @@ angular.module('starter')
         }, {
             scope: $scope
         });
+        $scope.veg = {};
+        $scope.veg.quantity = 1;
 
         $scope.chooseItem = function(chosenItem){
             $scope.item = chosenItem;
-            $scope.quantity = 1;
             $scope.showPlaceOrder();
         }
 
@@ -84,7 +85,7 @@ angular.module('starter')
         }
 
         $scope.addToCart = function (){
-            orderInCartFactory.addToCart($scope.item, $scope.quantity);
+            orderInCartFactory.addToCart($scope.item, $scope.veg.quantity);
             console.log(orderInCartFactory.getCart());
             $scope.hidePlaceOrder();
         }
