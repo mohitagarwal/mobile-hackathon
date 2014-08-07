@@ -1,0 +1,72 @@
+<ion-view class="modal">
+
+    <ion-header-bar>
+        <button class="button button-clear button-balanced" ng-click="hidePlaceOrder()">No Thanks</button>
+        <button class="button button-clear button-balanced" ng-click="addToCart()">Add To Cart</button>
+    </ion-header-bar>
+
+    <ion-content has-header="true" padding="true">
+
+        <div class="row">
+            <div class="col">
+                <h1>Onions : Rs. 35 per kg</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1>Quantity</h1>
+            </div>
+            <div class="col">
+                <div class="list card">
+                    <div class="item item-input-inset">
+                        <label>
+                            <input type="number">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h1>kg</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1>Cost : Rs. 35</h1>
+            </div>
+        </div>
+
+
+
+
+        <!--<div class="row" ng-repeat="listing in listings track by $index" ng-if="$even">-->
+            <!--<div class="col">-->
+                <!--<div class="list card">-->
+                    <!--<div class="item item-image">-->
+                        <!--<img class="full-image" ng-src="{{listing.url}}" />-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<h2>{{listing.name}}</h2>-->
+                        <!--<p>Rs. {{listing.price}}</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="col">-->
+                <!--<div class="list card">-->
+                    <!--<div class="item item-image">-->
+                        <!--<img class="full-image" ng-src="{{listings[$index+1].url}}" />-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<h2>{{listings[$index+1].name}}</h2>-->
+                        <!--<p>Rs. {{listings[$index+1].price}}</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+
+    </ion-content>
+
+</ion-view>
