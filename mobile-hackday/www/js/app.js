@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'openfb', 'starter.controllers',"firebase"])
+angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
 
     .run(function ($rootScope, $state, $ionicPlatform, $window, OpenFB) {
 
@@ -53,6 +53,16 @@ angular.module('starter', ['ionic', 'openfb', 'starter.controllers',"firebase"])
                 }
             })
 
+            .state('app.listings', {
+                url: "/listings",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/listings.html",
+                        controller: "ListingsCtrl"
+                    }
+                }
+            })
+
             .state('app.profile', {
                 url: "/profile",
                 views: {
@@ -66,5 +76,10 @@ angular.module('starter', ['ionic', 'openfb', 'starter.controllers',"firebase"])
         // fallback route
         $urlRouterProvider.otherwise('/app/login');
 
-    });
+    })
+
+
+
+
+
 
