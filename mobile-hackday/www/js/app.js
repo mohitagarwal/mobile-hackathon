@@ -61,16 +61,6 @@ angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
                         controller: "ListingsCtrl"
                     }
                 }
-            })
-
-            .state('app.profile', {
-                url: "/profile",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/profile.html",
-                        controller: "ProfileCtrl"
-                    }
-                }
             });
 
         // fallback route

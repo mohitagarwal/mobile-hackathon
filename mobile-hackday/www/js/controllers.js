@@ -27,18 +27,16 @@ angular.module('starter')
                 function () {
                     OpenFB.get('/me').success(function (user) {
                         $scope.user = user;
+
+                        geolocation.getLocation().then(function (data){
+                            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
+
+                            sellersFactory.addSeller($scope.user.name, false, $scope.coords.lat, $scope.coords.long);
+
+                            $location.path('/app/listings');
+                        });
+
                     });
-
-                    debugger;
-                    geolocation.getLocation().then(function (data){
-                        $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
-
-                        sellersFactory.addSeller($scope.user.name, false, $scope.coords.lat, $scope.coords.long);
-
-                        $location.path('/app/listings');
-                    });
-
-
                 },
                 function () {
                     alert('OpenFB login failed');
@@ -47,16 +45,29 @@ angular.module('starter')
 
     })
 
-    .controller('ListingsCtrl', function ($scope, OpenFB, geolocation) {
+    .controller('ListingsCtrl', function ($scope, OpenFB, listingsFactory) {
 
         OpenFB.get('/me').success(function (user) {
             $scope.user = user;
         });
 
-        geolocation.getLocation().then(function (data){
-            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
-            console.log(data.coords.latitude);
+        var promise = listingsFactory.getListingsForCustomer();
+        $scope.listings = [];
+        var index=0;
+        promise.then(function(data){
+            _.each(data, function(data, key){
+                $scope.listings[index] = data;
+                index++;
+
+            })
+
         });
+
+
+//        geolocation.getLocation().then(function (data){
+//            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
+//            console.log(data.coords.latitude);
+//        });
 
 //        $scope.item = {};
 //

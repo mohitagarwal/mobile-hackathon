@@ -6,16 +6,27 @@
 
     <ion-content has-header="true" padding="true">
 
-        <div class="row">
+        <div class="row" ng-repeat="listing in listings track by $index" ng-if="$even">
             <div class="col">
                 <div class="list card">
-                    <div class="item">
-                        <h2>{{user.name}}</h2>
-                        <p>{{user.email}}</p>
-                        <p>LAT: {{coords.lat}} Long: {{coords.long}}</p>
-                    </div>
                     <div class="item item-image">
-                        <img ng-src="https://graph.facebook.com/{{ user.id }}/picture?width=400&height=400" />
+                        <img class="full-image" ng-src="{{listing.url}}" />
+                    </div>
+                    <div class="item">
+                        <h2>{{listing.name}}</h2>
+                        <p>Rs. {{listing.price}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="list card">
+                    <div class="item item-image">
+                        <img class="full-image" ng-src="{{listings[$index+1].url}}" />
+                    </div>
+                    <div class="item">
+                        <h2>{{listings[$index+1].name}}</h2>
+                        <p>Rs. {{listings[$index+1].price}}</p>
                     </div>
                 </div>
             </div>
