@@ -27,6 +27,53 @@
 
 
         </div>
+        <div class="row">
+            <div class="col">
+
+                <div class="row cart-border">
+                    <div class="col col-40">
+                        {{orderInCartFactory.getTotalItemsCount()}}
+                    </div>
+                    <div class="col text-right">
+
+                    </div>
+                    <div class="col text-right">
+
+                    </div>
+                    <div class="col col-30 text-right">
+                        {{orderInCartFactory.getTotalCartValue()}}
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Delivery Details</h4>
+                <p>{{sellersFactory.currentName}}</p>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col">
+                Payment By Cash On Delivery
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col">
+
+                <button class="button button-block button-positive" ng-click="confirmOrder()">
+                    Confirm Order
+                </button>
+            </div>
+
+
+        </div>
 
 
     </ion-content>

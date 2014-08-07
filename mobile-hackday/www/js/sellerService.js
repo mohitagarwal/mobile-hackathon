@@ -15,7 +15,8 @@ angular.module('starter')
     this.currentLocation = {
         latitude:0,
         longitude:0
-    }
+    };
+    this.currentName = "";
     sellers.$loaded().then(function() {
 
     });
@@ -44,7 +45,8 @@ angular.module('starter')
         self.currentLocation = {
             latitude: latitude,
             longitude: longitude
-        }
+        };
+        self.currentName = name;
         calculateSellerDistance();
 
     };

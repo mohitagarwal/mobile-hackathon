@@ -29,6 +29,17 @@ angular.module('starter')
         this.getCart = function(){
             return this.cart;
         }
+        this.getTotalItemsCount = function(){
+            return _.reduce(this.cart,function(memo, item){
+                return memo + item.quantity;
+            },0)
+        }
+        this.getTotalCartValue = function(){
+            var price = _.reduce(this.cart,function(memo, item){
+                return memo + item.price;
+            },0)
+            return price;
+        }
 
     }])
 ;
