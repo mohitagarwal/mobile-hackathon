@@ -1,13 +1,13 @@
 <ion-view title="Subzz">
 
     <ion-nav-buttons side="right">
-        <button class="button button-icon icon ion-bag"></button>
+        <button class="button button-icon icon ion-bag" ng-click="checkout()"></button>
     </ion-nav-buttons>
 
     <ion-content has-header="true" padding="true">
 
         <div class="row" ng-repeat="listing in listings track by $index" ng-if="$even">
-            <div class="col">
+            <div class="col" ng-click="chooseItem(listing)">
                 <div class="list card">
                     <div class="item item-image">
                         <img class="full-image" ng-src="{{listing.url}}" />
@@ -19,7 +19,7 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col" ng-click="chooseItem(listings[$index+1])">
                 <div class="list card">
                     <div class="item item-image">
                         <img class="full-image" ng-src="{{listings[$index+1].url}}" />

@@ -28,8 +28,8 @@ angular.module('starter')
                     OpenFB.get('/me').success(function (user) {
                         $scope.user = user;
 
-                        geolocation.getLocation().then(function (data){
-                            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
+                        geolocation.getLocation().then(function (data) {
+                            $scope.coords = {lat: data.coords.latitude, long: data.coords.longitude};
 
                             sellersFactory.addSeller($scope.user.name, false, $scope.coords.lat, $scope.coords.long);
 
@@ -45,7 +45,7 @@ angular.module('starter')
 
     })
 
-    .controller('ListingsCtrl', function ($scope, OpenFB, listingsFactory) {
+    .controller('ListingsCtrl', function ($scope, $state, OpenFB, listingsFactory, $ionicModal, orderInCartFactory) {
 
         OpenFB.get('/me').success(function (user) {
             $scope.user = user;
@@ -53,15 +53,47 @@ angular.module('starter')
 
         var promise = listingsFactory.getListingsForCustomer();
         $scope.listings = [];
-        var index=0;
-        promise.then(function(data){
-            _.each(data, function(data, key){
+        var index = 0;
+        promise.then(function (data) {
+            _.each(data, function (data, key) {
                 $scope.listings[index] = data;
                 index++;
 
             })
 
         });
+
+        $ionicModal.fromTemplateUrl('templates/place_order.html', function (modal) {
+            $scope.placeOrder = modal;
+        }, {
+            scope: $scope
+        });
+
+        $scope.chooseItem = function(chosenItem){
+            $scope.item = chosenItem;
+            $scope.quantity = 1;
+            $scope.showPlaceOrder();
+        }
+
+        $scope.showPlaceOrder = function(){
+            $scope.placeOrder.show();
+        }
+
+        $scope.hidePlaceOrder = function(){
+            $scope.placeOrder.hide();
+        }
+
+        $scope.addToCart = function (){
+            orderInCartFactory.addToCart($scope.item, $scope.quantity);
+            console.log(orderInCartFactory.getCart());
+            $scope.hidePlaceOrder();
+        }
+
+        $scope.checkout = function(){
+            $state.go(app.cart);
+        }
+
+
 
 
 //        geolocation.getLocation().then(function (data){
@@ -88,8 +120,8 @@ angular.module('starter')
             $scope.user = user;
         });
 
-        geolocation.getLocation().then(function (data){
-            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
+        geolocation.getLocation().then(function (data) {
+            $scope.coords = {lat: data.coords.latitude, long: data.coords.longitude};
             console.log(data.coords.latitude);
         });
     })
@@ -105,7 +137,7 @@ angular.module('starter')
             .success(function (result) {
                 $scope.friends = result.data;
             })
-            .error(function(data) {
+            .error(function (data) {
                 alert(data.error.message);
             });
     })
@@ -115,19 +147,19 @@ angular.module('starter')
             .success(function (result) {
                 $scope.friends = result.data;
             })
-            .error(function(data) {
+            .error(function (data) {
                 alert(data.error.message);
             });
     })
 
     .controller('FeedCtrl', function ($scope, $stateParams, OpenFB, $ionicLoading) {
 
-        $scope.show = function() {
+        $scope.show = function () {
             $scope.loading = $ionicLoading.show({
                 content: 'Loading feed...'
             });
         };
-        $scope.hide = function(){
+        $scope.hide = function () {
             $scope.loading.hide();
         };
 
@@ -140,7 +172,7 @@ angular.module('starter')
                     // Used with pull-to-refresh
                     $scope.$broadcast('scroll.refreshComplete');
                 })
-                .error(function(data) {
+                .error(function (data) {
                     $scope.hide();
                     alert(data.error.message);
                 });
