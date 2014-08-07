@@ -61,7 +61,17 @@ angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
                         controller: "ListingsCtrl"
                     }
                 }
+            })
+            .state('app.cart', {
+                url: "/cart",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/cart.html",
+                        controller: "cartCtrl"
+                    }
+                }
             });
+
 
         // fallback route
         $urlRouterProvider.otherwise('/app/login');

@@ -11,3 +11,10 @@
     margin-top: 0;
     margin-bottom: 4px;
 }
+.text-right{
+    text-align: right;
+}
+
+.cart-border{
+    border: 1px solid #DDDDDD;
+}
