@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['geolocation'])
+angular.module('starter')
 
     .controller('AppCtrl', function ($scope, $state, OpenFB) {
 
@@ -19,13 +19,26 @@ angular.module('starter.controllers', ['geolocation'])
 
     })
 
-    .controller('LoginCtrl', function ($scope, $location, OpenFB) {
+    .controller('LoginCtrl', function ($scope, $location, OpenFB, sellersFactory, geolocation) {
 
         $scope.facebookLogin = function () {
 
             OpenFB.login('email,read_stream,publish_stream').then(
                 function () {
-                    $location.path('/app/listings');
+                    OpenFB.get('/me').success(function (user) {
+                        $scope.user = user;
+                    });
+
+                    debugger;
+                    geolocation.getLocation().then(function (data){
+                        $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
+
+                        sellersFactory.addSeller($scope.user.name, false, $scope.coords.lat, $scope.coords.long);
+
+                        $location.path('/app/listings');
+                    });
+
+
                 },
                 function () {
                     alert('OpenFB login failed');
@@ -34,7 +47,16 @@ angular.module('starter.controllers', ['geolocation'])
 
     })
 
-    .controller('ListingsCtrl', function ($scope, OpenFB) {
+    .controller('ListingsCtrl', function ($scope, OpenFB, geolocation) {
+
+        OpenFB.get('/me').success(function (user) {
+            $scope.user = user;
+        });
+
+        geolocation.getLocation().then(function (data){
+            $scope.coords = {lat:data.coords.latitude, long:data.coords.longitude};
+            console.log(data.coords.latitude);
+        });
 
 //        $scope.item = {};
 //

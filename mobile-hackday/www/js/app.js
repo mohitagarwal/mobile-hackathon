@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'openfb', 'starter.controllers',"firebase"])
+angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
 
     .run(function ($rootScope, $state, $ionicPlatform, $window, OpenFB) {
 
@@ -76,5 +76,10 @@ angular.module('starter', ['ionic', 'openfb', 'starter.controllers',"firebase"])
         // fallback route
         $urlRouterProvider.otherwise('/app/login');
 
-    });
+    })
+
+
+
+
+
 
