@@ -70,6 +70,16 @@ angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
                         controller: "cartCtrl"
                     }
                 }
+            })
+
+            .state('app.track_order', {
+                url: "/track_order",
+                views: {
+                    'menuContent': {
+                        templateUrl: "templates/track_order.html",
+                        controller: "TrackCtrl"
+                    }
+                }
             });
 
 

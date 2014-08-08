@@ -116,15 +116,13 @@ angular.module('starter')
 
     })
 
-    .controller('ProfileCtrl', function ($scope, OpenFB, geolocation) {
-        OpenFB.get('/me').success(function (user) {
-            $scope.user = user;
-        });
+    .controller('TrackCtrl', function ($scope, checkoutFactory) {
+        $scope.veg = {};
+        $scope.veg.orderId = checkoutFactory.orderId;
 
-        geolocation.getLocation().then(function (data) {
-            $scope.coords = {lat: data.coords.latitude, long: data.coords.longitude};
-            console.log(data.coords.latitude);
-        });
+        var date = new Date();
+        $scope.time = date.now();
+
     })
 
     .controller('PersonCtrl', function ($scope, $stateParams, OpenFB) {

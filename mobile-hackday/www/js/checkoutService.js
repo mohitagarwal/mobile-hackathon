@@ -7,6 +7,8 @@ angular.module('starter')
         var probableSellers = sellerService.probableSellers;
         var customerId = "";
 
+        var orderId = "";
+;
         var customerAddress = {
             addressLine: "Flipkart.com, VS, Koramangala 1st Block",
             city: "Bangalore",
