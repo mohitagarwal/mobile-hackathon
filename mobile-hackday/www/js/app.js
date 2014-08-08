@@ -2,24 +2,25 @@ angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
 
     .run(function ($rootScope, $state, $ionicPlatform, $window, OpenFB) {
 
-        OpenFB.init('424561861018882');
+
 
         $ionicPlatform.ready(function () {
+            OpenFB.init('424561861018882');
             if (window.StatusBar) {
                 StatusBar.styleDefault();
             }
         });
 
-        $rootScope.$on('$stateChangeStart', function(event, toState) {
-            if (toState.name !== "app.login" && toState.name !== "app.logout" && !$window.sessionStorage['fbtoken']) {
-                $state.go('app.login');
-                event.preventDefault();
-            }
-        });
-
-        $rootScope.$on('OAuthException', function() {
-            $state.go('app.login');
-        });
+//        $rootScope.$on('$stateChangeStart', function(event, toState) {
+//            if (toState.name !== "app.login" && toState.name !== "app.logout" && !$window.sessionStorage['fbtoken']) {
+//                $state.go('app.login');
+//                event.preventDefault();
+//            }
+//        });
+//
+//        $rootScope.$on('OAuthException', function() {
+//            $state.go('app.login');
+//        });
 
     })
 

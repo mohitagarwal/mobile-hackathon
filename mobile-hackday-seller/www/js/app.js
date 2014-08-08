@@ -25,43 +25,6 @@ angular.module('starter', ['ionic', 'openfb',"firebase"])
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
-        $stateProvider
-
-            .state('app', {
-                url: "/app",
-                templateUrl:'templates/menu.html',
-                controller:'AppCtrl'
-            })
-
-            .state('app.login', {
-                url: "/login",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/login.html",
-                        controller: "LoginCtrl"
-                    }
-                }
-            })
-
-            .state('app.orders', {
-                url: "/orders",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/orders.html",
-                        controller: "OrdersCtrl"
-                    }
-                }
-            })
-
-            .state('app.logout', {
-                url: "/logout",
-                views: {
-                    'menuContent': {
-                        templateUrl: "templates/logout.html",
-                        controller: "LogoutCtrl"
-                    }
-                }
-            });
 
 
         // fallback route

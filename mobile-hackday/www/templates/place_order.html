@@ -21,17 +21,17 @@
         </div>
         <div class="card">
             <div class="item item-text-wrap">
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col"></div>
-                    <div class="col">
-                        <h5>{{item.name}} :</h5>
+                <div class="list card">
+                    <div class="item item-image">
+                        <img class="full-image" ng-src="{{item.url}}" />
                     </div>
-                    <div class="col">
-                        <h5>Rs. {{item.price}} per kg</h5>
+                    <div class="item">
+                        <h2>{{item.name}}</h2>
+                        <p>
+                            <input type="text" ng-model="veg.quantity" class="cart-border">
+                        </p>
+                        <h5> Rs. {{item.price * veg.quantity}}</h5>
                     </div>
-                    <div class="col"></div>
-                    <div class="col"></div>
                 </div>
 
 
@@ -46,7 +46,7 @@
                         <h5>Cost </h5>
                     </div>
                     <div class="col">
-                        <h5> Rs. {{item.price * veg.quantity}}</h5>
+
                     </div>
 
                     <div class="col"></div>
