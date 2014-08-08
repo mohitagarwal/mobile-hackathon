@@ -17,25 +17,30 @@ angular.module('starter')
         longitude:0
     };
     this.currentName = "";
+
+    this.probableSellers = [];
     sellers.$loaded().then(function() {
 
     });
     function calculateSellerDistance(){
         _.each(sellers, function(seller,key){
             if(key.indexOf("$") === -1){
-                calculateDistanceFromCurrent({
+                var distance = calculateDistanceFromCurrent({
                     latitude: seller.latitude,
                     longitude: seller.longitude
                 },self.currentLocation);
+                if(distance < 2){
+                    self.probableSellers.push(seller);
+                }
             }
 
         });
     }
+
     function calculateDistanceFromCurrent(from,to){
-        var distance =Math.sqrt( Math.pow((from.latitude-to.latitude),2) + Math.pow((from.longitude-to.longitude),2));
-
-
+        return Math.sqrt( Math.pow((from.latitude-to.latitude),2) + Math.pow((from.longitude-to.longitude),2));
     }
+
     this.addSeller = function (name,isSeller,latitude,longitude){
         sellersRef.child(name).set({
             isSeller: isSeller,
@@ -46,6 +51,7 @@ angular.module('starter')
             latitude: latitude,
             longitude: longitude
         };
+        debugger;
         self.currentName = name;
         calculateSellerDistance();
 
