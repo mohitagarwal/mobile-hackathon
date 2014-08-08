@@ -1,0 +1,42 @@
+<ion-view class="modal">
+
+    <ion-header-bar>
+        <button class="button button-clear button-balanced" ng-click="hidePlaceOrder()">No Thanks</button>
+        <button class="button button-clear button-balanced" ng-click="addToCart()">Add To Cart</button>
+    </ion-header-bar>
+
+    <ion-content has-header="true" padding="true">
+
+        <div class="row">
+            <div class="col">
+                <h4>{{item.name}} : Rs. {{item.price}} per kg</h4>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col col-30">
+                <h5 class="color-quantity">Quantity</h5>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col col-20">
+
+                <input class="input-quantity" type="number" ng-model="veg.quantity" >
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col cost-green">
+                <h5>Cost </h5>
+                <div>
+                    Rs. {{item.price}}
+                </div>
+            </div>
+        </div>
+
+
+    </ion-content>
+
+</ion-view>

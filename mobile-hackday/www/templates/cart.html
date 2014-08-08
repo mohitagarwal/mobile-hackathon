@@ -1,0 +1,90 @@
+<ion-view title="Subzz">
+
+    <ion-nav-buttons side="right">
+        <button class="button button-icon icon ion-bag"></button>
+    </ion-nav-buttons>
+
+    <ion-content has-header="true" padding="true">
+
+        <div class="row">
+            <div class="col">
+                    <h2>Your Orders</h2>
+                    <div class="row cart-border" ng-repeat="order in orderInCartFactory.getCart()">
+                        <div class="col col-40">
+                            {{order.listing.name}}
+                        </div>
+                        <div class="col text-right">
+                            {{order.listing.price}}/Kg
+                        </div>
+                        <div class="col text-right">
+                            {{order.quantity}}
+                        </div>
+                        <div class="col col-30 text-right">
+                            {{order.price}}/Kg
+                        </div>
+                    </div>
+            </div>
+
+
+        </div>
+        <div class="row total-cart">
+            <div class="col">
+
+                <div class="row cart-border">
+                    <div class="col col-40">
+                        {{orderInCartFactory.getTotalItemsCount()}}
+                    </div>
+                    <div class="col text-right">
+
+                    </div>
+                    <div class="col text-right">
+
+                    </div>
+                    <div class="col col-30 text-right cart-value">
+                        <h4>{{orderInCartFactory.getTotalCartValue()}}</h4>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col">
+                <h4>Delivery Details</h4>
+                <p>{{sellersFactory.currentName}}</p>
+                <p>
+
+                </p>
+                <div class="card payment">
+                    <div class="item item-text-wrap">
+
+                        Flipkart,Vaishnavi Summit,
+                        Wipro Park,Koramangala,
+                        Bangalore - 560034
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col payment">
+                Payment By Cash On Delivery
+            </div>
+        </div>
+        <div class="row">
+            <div class="col pl0 pr0">
+
+                <button class="button button-block button-positive" ng-click="confirmOrder()">
+                    Confirm Order
+                </button>
+            </div>
+
+
+        </div>
+
+
+    </ion-content>
+
+</ion-view>

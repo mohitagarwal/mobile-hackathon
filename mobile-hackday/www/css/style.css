@@ -1,1 +1,45 @@
 /* Empty. Add your own CSS if you like */
+
+.ionic-logo {
+    display: block;
+    margin: 15px auto;
+    width: 96px;
+    height: 96px;
+}
+
+.item-body > p {
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+.text-right{
+    text-align: right;
+}
+
+.cart-border{
+    border-bottom: 1px solid #DDDDDD;
+}
+.payment{
+    background: #E8FFD6;
+    color: #6ACA6B;
+}
+.pl0{
+    padding-left: 0px;
+}
+.pr0{
+    padding-right: 0px;
+}
+.total-cart{
+    background: #FAFAFA;
+}
+.cart-value{
+    color: #73CA6F;
+}
+.color-quantity{
+    color: #808080;
+}
+.input-quantity{
+    border-bottom: 1px solid #808080 !important;
+}
+.cost-green{
+    color: #6ACA6B;
+}
