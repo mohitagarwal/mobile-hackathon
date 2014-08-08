@@ -24,7 +24,7 @@ angular.module('starter')
     });
     function calculateSellerDistance(){
         _.each(sellers, function(seller,key){
-            debugger;
+
             if(key.indexOf("$") === -1){
                 var distance = calculateDistanceFromCurrent({
                     latitude: seller.latitude,
