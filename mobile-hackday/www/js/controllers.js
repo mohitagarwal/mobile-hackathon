@@ -45,7 +45,7 @@ angular.module('starter')
 
     })
 
-    .controller('ListingsCtrl', function ($scope, $state, OpenFB, listingsFactory, $ionicModal, orderInCartFactory) {
+    .controller('ListingsCtrl', function ($scope, $state, OpenFB, listingsFactory, $ionicModal, orderInCartFactory, $ionicPopup) {
 
         OpenFB.get('/me').success(function (user) {
             $scope.user = user;

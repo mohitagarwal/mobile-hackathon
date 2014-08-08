@@ -27,7 +27,7 @@
 
 
         </div>
-        <div class="row">
+        <div class="row total-cart">
             <div class="col">
 
                 <div class="row cart-border">
@@ -40,8 +40,8 @@
                     <div class="col text-right">
 
                     </div>
-                    <div class="col col-30 text-right">
-                        {{orderInCartFactory.getTotalCartValue()}}
+                    <div class="col col-30 text-right cart-value">
+                        <h4>{{orderInCartFactory.getTotalCartValue()}}</h4>
                     </div>
                 </div>
             </div>
@@ -52,20 +52,29 @@
             <div class="col">
                 <h4>Delivery Details</h4>
                 <p>{{sellersFactory.currentName}}</p>
+                <p>
+
+                </p>
+                <div class="card payment">
+                    <div class="item item-text-wrap">
+
+                        Flipkart,Vaishnavi Summit,
+                        Wipro Park,Koramangala,
+                        Bangalore - 560034
+                    </div>
+                </div>
 
             </div>
 
 
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col payment">
                 Payment By Cash On Delivery
             </div>
-
-
         </div>
         <div class="row">
-            <div class="col">
+            <div class="col pl0 pr0">
 
                 <button class="button button-block button-positive" ng-click="confirmOrder()">
                     Confirm Order
