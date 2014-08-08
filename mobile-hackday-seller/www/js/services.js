@@ -40,7 +40,7 @@ angular.module('starter')
                         if(orderId.indexOf("$") === -1){
 
                             order.orderId = orderId;
-                            _.extend(order,orderData);
+                            order = _.extend(order,orderData);
                         }
 
                     });
@@ -57,18 +57,26 @@ angular.module('starter')
 
         };
         this.getPossibleOrders = function(){
-            return _.filter(allOrdersArr, function(item){
+            var arr = _.filter(allOrdersArr, function(item){
                 return item.sellerId === "";
             });
+            console.log(arr);
+            return arr;
         };
-        this.confirmOrder = function(order){
-            order.sellerId = this.sellerId;
-            orders.$save(order);
+        this.confirmOrder = function(orderSelected){
+            orderSelected.sellerId = this.sellerId;
+            var selectedOrder = _.find(orders,function(order){
+                return !!order[orderSelected.orderId];
+            });
+            selectedOrder[orderSelected.orderId].sellerId = this.sellerId; ;
+            orders.$save(selectedOrder);
+            onOrdersChanged();
         }
         this.getOrdersConfirmedBySeller = function(orders){
-                return _.find(allOrdersArr,function(order){
-                    return order.sellerId === this.sellerId;c
+                var arr =  _.filter(allOrdersArr,function(order){
+                    return order.sellerId === self.sellerId;
                 });
+            return arr;
         }
 
 });
