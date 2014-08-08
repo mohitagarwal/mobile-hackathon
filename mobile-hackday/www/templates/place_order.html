@@ -6,33 +6,56 @@
     </ion-header-bar>
 
     <ion-content has-header="true" padding="true">
-
         <div class="row">
+            <div class="col"></div>
+            <div class="col"></div>
+
             <div class="col">
-                <h4>{{item.name}} : Rs. {{item.price}} per kg</h4>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col col-30">
-                <h5 class="color-quantity">Quantity</h5>
+                Item Summary
             </div>
 
+
+            <div class="col"></div>
+            <div class="col"></div>
+
         </div>
-        <div class="row">
-            <div class="col col-20">
-
-                <input class="input-quantity" type="number" ng-model="veg.quantity" >
-
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col cost-green">
-                <h5>Cost </h5>
-                <div>
-                    Rs. {{item.price}}
+        <div class="card">
+            <div class="item item-text-wrap">
+                <div class="row">
+                    <div class="col"></div>
+                    <div class="col"></div>
+                    <div class="col">
+                        <h5>{{item.name}} :</h5>
+                    </div>
+                    <div class="col">
+                        <h5>Rs. {{item.price}} per kg</h5>
+                    </div>
+                    <div class="col"></div>
+                    <div class="col"></div>
                 </div>
+
+
+
+
+                <div class="row">
+
+                    <div class="col"></div>
+                    <div class="col"></div>
+
+                    <div class="col cost-green">
+                        <h5>Cost </h5>
+                    </div>
+                    <div class="col">
+                        <h5> Rs. {{item.price * veg.quantity}}</h5>
+                    </div>
+
+                    <div class="col"></div>
+                    <div class="col"></div>
+
+
+
+                </div>
+
             </div>
         </div>
 
