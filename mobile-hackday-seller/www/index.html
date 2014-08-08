@@ -13,50 +13,54 @@
 <ion-nav-view id="main">
 
     Testing
-    <button ng-click="markAsConfirmed()">This</button>
+
     <ion-tabs class="tabs-positive">
 
         <ion-tab title="Placed Orders" ng-controller="placedOrdersCtrl" >
 
 
+            <div class="list" >
 
-            <ion-list
-                    show-delete="shouldShowDelete"
-                    show-reorder="shouldShowReorder"
-                    can-swipe="listCanSwipe">
-                <ion-item ng-repeat="order in orderService.getPossibleOrders()"
-                          class="item-thumbnail-left">
+                <div class="item item-button-right" ng-repeat="order in orderService.getPossibleOrders()">
+                    {{order.orderId}}
+                    <br/>
 
-                    <!--<img ng-src="{{item.img}}">-->
-                    <h5>{{order.orderId}}</h5>
-                    <p>
-                       <span ng-repeat="item in order.orderItems">
-                           {{item.quantity}} kg of {{item.listing.name}}
-                       </span>
-                    </p>
-                    <ion-option-button class="button-positive"
-                                       ng-click="share(item)">
-                        Share
-                    </ion-option-button>
-                    <ion-option-button class="button-info"
-                                       ng-click="edit(item)">
-                        Edit
-                    </ion-option-button>
-                    <ion-delete-button class="ion-minus-circled"
-                                       ng-click="items.splice($index, 1)">
-                    </ion-delete-button>
-                    <ion-reorder-button class="ion-navicon"
-                                        on-reorder="reorderItem(item, $fromIndex, $toIndex)">
-                    </ion-reorder-button>
+                    <span ng-repeat="item in order.orderItems">
 
-                </ion-item>
-            </ion-list>
+                        {{item.quantity}} kg of {{item.listing.name}}
+                        <span ng-hide="$last">,</span>
+                        <!--<span ng-repeat="order in order.orderItemId"></span>-->
+                    </span>
+                    <a class="button button-clear button-positive" ng-click="orderService.confirmOrder(order)">Confirm</a>
+                </div>
+
+
+
+            </div>
+            <!--<span ng-repeat="item in order.orderItems">-->
+                <!--{{item.quantity}} kg of {{item.listing.name}}-->
+            <!--</span>-->
+
         </ion-tab>
 
-        <ion-tab title="Your Orders" >
-            <header class="bar bar-header bar-positive">
-                <h1 class="title">Your Orders</h1>
-            </header>
+        <ion-tab title="Your Orders" ng-controller="yourOrdersCtrl">
+            <div class="list" >
+
+                <div class="item item-button-right" ng-repeat="order in orderService.getOrdersConfirmedBySeller()">
+                    {{order.orderId}}
+                    <br/>
+
+                    <span ng-repeat="item in order.orderItems">
+
+                        {{item.quantity}} kg of {{item.listing.name}}
+                        <span ng-hide="$last">,</span>
+                        <!--<span ng-repeat="order in order.orderItemId"></span>-->
+                    </span>
+                </div>
+
+
+
+            </div>
         </ion-tab>
 
 

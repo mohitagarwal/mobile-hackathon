@@ -14,7 +14,9 @@
 .text-right{
     text-align: right;
 }
-
+.text-center {
+    text-align: center;
+}
 .cart-border{
     border-bottom: 1px solid #cccccc;
     width: 60px;

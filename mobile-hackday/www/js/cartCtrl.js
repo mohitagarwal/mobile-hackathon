@@ -7,7 +7,9 @@ angular.module('starter')
     $scope.test = "hello";
     $scope.orderInCartFactory = orderInCartFactory;
     $scope.sellersFactory = sellersFactory;
+
     $scope.confirmOrder = function(){
+        debugger;
         var json = checkoutFactory.generateJSON();
         var deferred = $q.defer();
         json.then(function(data){
@@ -29,8 +31,10 @@ angular.module('starter')
                 deferred.reject(error);
                 console.log("Error while placing order");
             });
-        });
-        return deferred.promise;
 
+
+        });
+
+        return deferred.promise;
     }
 })

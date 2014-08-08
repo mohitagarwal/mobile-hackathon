@@ -78,14 +78,14 @@ angular.module('starter', ['ionic', 'openfb', "firebase", 'geolocation'])
                 views: {
                     'menuContent': {
                         templateUrl: "templates/track_order.html",
-                        controller: "TrackCtrl"
+                        controller: "trackCtrl"
                     }
                 }
             });
 
 
         // fallback route
-        $urlRouterProvider.otherwise('/app/login');
+        $urlRouterProvider.otherwise('/app/listings');
 
     })
 

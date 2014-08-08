@@ -4,4 +4,9 @@ angular.module('starter')
 
         $scope.orderService = orderService;
 
+    })
+    .controller('yourOrdersCtrl', function ($scope,orderService) {
+
+        $scope.orderService = orderService;
+
     });

@@ -118,12 +118,12 @@ angular.module('starter')
 
     })
 
-    .controller('TrackCtrl', function ($scope, checkoutFactory) {
+    .controller('trackCtrl', function ($scope, checkoutFactory) {
         $scope.veg = {};
         $scope.veg.orderId = checkoutFactory.orderId;
 
         var date = new Date();
-        $scope.time = date.now();
+        $scope.time = Date.now();
 
     })
 
