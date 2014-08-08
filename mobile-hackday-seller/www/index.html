@@ -30,7 +30,9 @@
                     <!--<img ng-src="{{item.img}}">-->
                     <h5>{{order.orderId}}</h5>
                     <p>
-                        {{order.orderItems[0].quantity}} kg of {{order.orderItems[0].listing.name}}
+                       <span ng-repeat="item in order.orderItems">
+                           {{item.quantity}} kg of {{item.listing.name}}
+                       </span>
                     </p>
                     <ion-option-button class="button-positive"
                                        ng-click="share(item)">
