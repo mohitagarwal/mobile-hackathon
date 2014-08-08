@@ -24,7 +24,13 @@ angular.module('starter', ['ionic', 'openfb',"firebase"])
 
     })
 
+    .config(function ($stateProvider, $urlRouterProvider) {
 
+
+        // fallback route
+        $urlRouterProvider.otherwise('/app/login');
+
+    })
 
 
 

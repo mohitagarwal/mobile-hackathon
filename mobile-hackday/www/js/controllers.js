@@ -34,6 +34,8 @@ angular.module('starter')
                             sellersFactory.addSeller($scope.user.name, false, $scope.coords.lat, $scope.coords.long);
 
                             $location.path('/app/listings');
+                        },function(failure){
+                            console.log(failure);
                         });
 
                     });

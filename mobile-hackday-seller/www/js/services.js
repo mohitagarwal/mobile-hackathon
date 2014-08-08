@@ -65,6 +65,10 @@ angular.module('starter')
             order.sellerId = this.sellerId;
             orders.$save(order);
         }
-
+        this.getOrdersConfirmedBySeller = function(orders){
+                return _.find(allOrdersArr,function(order){
+                    return order.sellerId === this.sellerId;c
+                });
+        }
 
 });
