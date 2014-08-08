@@ -28,11 +28,6 @@ angular.module('starter')
                 console.log("Error while placing order");
             });
         });
-
-
-
-
-
         return deferred.resolve;
 
     };
