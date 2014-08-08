@@ -24,13 +24,14 @@ angular.module('starter')
     });
     function calculateSellerDistance(){
         _.each(sellers, function(seller,key){
+            debugger;
             if(key.indexOf("$") === -1){
                 var distance = calculateDistanceFromCurrent({
                     latitude: seller.latitude,
                     longitude: seller.longitude
                 },self.currentLocation);
                 if(distance < 2){
-                    self.probableSellers.push(seller);
+                    self.probableSellers.push(key);
                 }
             }
 

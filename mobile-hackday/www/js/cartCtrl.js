@@ -9,21 +9,29 @@ angular.module('starter')
     $scope.sellersFactory = sellersFactory;
     $scope.confirmOrder = function(){
         var json = checkoutFactory.generateJSON();
-
         var deferred = $q.defer();
-        var promise = $http({
-            url:'http://172.17.89.106:8080/myapp/rest/order',
-            method:'POST',
-            data:json
+        json.then(function(data){
+            var promise = $http({
+                url:'http://172.17.91.172:8080/myapp/rest/order',
+                method:'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data:data
+            });
+            promise.success(function(data){
+                deferred.resolve(data);
+                console.log("Successfully Placed");
+            });
+            promise.error(function(error){
+                deferred.reject(error);
+                console.log("Error while placing order");
+            });
         });
-        promise.success(function(data){
-            deferred.resolve(data);
-            console.log("Successfully Placed");
-        });
-        promise.error(function(error){
-            deferred.reject(error);
-            console.log("Error while placing order");
-        });
+
+
+
+
 
         return deferred.resolve;
 
