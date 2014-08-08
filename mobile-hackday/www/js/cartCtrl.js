@@ -12,7 +12,7 @@ angular.module('starter')
 
         var deferred = $q.defer();
         var promise = $http({
-            url:'http://172.17.91.172:8080/myapp/rest/order',
+            url:'http://172.17.89.106:8080/myapp/rest/order',
             method:'POST',
             data:json
         });
