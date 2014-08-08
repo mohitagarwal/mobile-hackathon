@@ -9,62 +9,32 @@
 
         <div class="row">
             <div class="col">
-                <h1>{{item.name}} : Rs. {{item.price}} per kg</h1>
+                <h4>{{item.name}} : Rs. {{item.price}} per kg</h4>
             </div>
         </div>
 
         <div class="row">
-            <div class="col">
-                <h1>Quantity</h1>
+            <div class="col col-30">
+                <h5 class="color-quantity">Quantity</h5>
             </div>
-            <div class="col">
-                <div class="list card">
-                    <div class="item item-input-inset">
-                        <label>
-                            <input type="number" ng-model="veg.quantity">
-                        </label>
-                    </div>
+
+        </div>
+        <div class="row">
+            <div class="col col-20">
+
+                <input class="input-quantity" type="number" ng-model="veg.quantity" >
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col cost-green">
+                <h5>Cost </h5>
+                <div>
+                    Rs. {{item.price}}
                 </div>
             </div>
-            <div class="col">
-                <h1>kg</h1>
-            </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <h3>Cost : Rs. {{item.price}}</h3>
-            </div>
-        </div>
-
-
-
-
-        <!--<div class="row" ng-repeat="listing in listings track by $index" ng-if="$even">-->
-            <!--<div class="col">-->
-                <!--<div class="list card">-->
-                    <!--<div class="item item-image">-->
-                        <!--<img class="full-image" ng-src="{{listing.url}}" />-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
-                        <!--<h2>{{listing.name}}</h2>-->
-                        <!--<p>Rs. {{listing.price}}</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="col">-->
-                <!--<div class="list card">-->
-                    <!--<div class="item item-image">-->
-                        <!--<img class="full-image" ng-src="{{listings[$index+1].url}}" />-->
-                    <!--</div>-->
-                    <!--<div class="item">-->
-                        <!--<h2>{{listings[$index+1].name}}</h2>-->
-                        <!--<p>Rs. {{listings[$index+1].price}}</p>-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
 
 
     </ion-content>
