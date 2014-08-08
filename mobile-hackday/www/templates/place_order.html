@@ -1,65 +1,43 @@
 <ion-view class="modal">
 
-    <ion-header-bar>
-        <button class="button button-clear button-balanced" ng-click="hidePlaceOrder()">No Thanks</button>
-        <button class="button button-clear button-balanced" ng-click="addToCart()">Add To Cart</button>
-    </ion-header-bar>
+    <ion-content has-header="true">
+        <!--<div class="card">-->
+        <!--<div class="item item-text-wrap">-->
+        <div class="list card">
+            <!--<div class="item item-image">-->
+            <!--<img class="full-image" ng-src="{{item.url}}" />-->
+            <!--</div>-->
+            <div class="item item-body">
+                <h2>{{item.name}} · Rs. {{item.price}} per kg</h2>
+                <br>
+                <h4 class="input-label">QUANTITY</h4>
 
-    <ion-content has-header="true" padding="true">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
+                <div class="cart-border">
+                    <input type="text" ng-model="veg.quantity" style="text-align: right">
+                </div>
+                <br>
+                <h4 class="input-label" style="color: #66cc33">COST</h4>
 
-            <div class="col">
-                Item Summary
+                <h3 style="color: #66cc33"> Rs. {{item.price * veg.quantity}}</h3>
             </div>
-
-
-            <div class="col"></div>
-            <div class="col"></div>
-
-        </div>
-        <div class="card">
-            <div class="item item-text-wrap">
-                <div class="list card">
-                    <div class="item item-image">
-                        <img class="full-image" ng-src="{{item.url}}" />
-                    </div>
-                    <div class="item">
-                        <h2>{{item.name}}</h2>
-                        <p>
-                            <input type="text" ng-model="veg.quantity" class="cart-border">
-                        </p>
-                        <h5> Rs. {{item.price * veg.quantity}}</h5>
+            <div class="item tabs tabs-secondary tabs-icon-left">
+                <div class="tab-item" ng-click="hidePlaceOrder()">
+                    <button class="button button-clear button-dark">
+                        <i class="icon ion-close"></i>
+                        No Thanks
+                    </button>
+                </div>
+                <div class="tab-item" ng-click="addToCart()">
+                    <div class="buttons">
+                        <button class="button button-clear button-balanced">
+                            <i class="icon ion-bag"></i>
+                            Add To Cart
+                        </button>
                     </div>
                 </div>
-
-
-
-
-                <div class="row">
-
-                    <div class="col"></div>
-                    <div class="col"></div>
-
-                    <div class="col cost-green">
-                        <h5>Cost </h5>
-                    </div>
-                    <div class="col">
-
-                    </div>
-
-                    <div class="col"></div>
-                    <div class="col"></div>
-
-
-
-                </div>
-
             </div>
         </div>
-
-
+        <!--</div>-->
+        <!--</div>-->
     </ion-content>
-
 </ion-view>

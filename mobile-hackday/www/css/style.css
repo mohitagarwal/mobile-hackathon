@@ -16,7 +16,11 @@
 }
 
 .cart-border{
-    border-bottom: 1px solid #DDDDDD;
+    border-bottom: 1px solid #cccccc;
+    width: 60px;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    font-size: 24px;
 }
 .payment{
     background: #E8FFD6;
@@ -42,4 +46,8 @@
 }
 .cost-green{
     color: #6ACA6B;
+}
+
+.list:last-child.card{
+    margin-bottom: 0px;
 }
