@@ -122,9 +122,6 @@ angular.module('starter')
         $scope.veg = {};
         $scope.veg.orderId = checkoutFactory.orderId;
 
-        var date = new Date();
-        $scope.time = Date.now();
-
     })
 
     .controller('PersonCtrl', function ($scope, $stateParams, OpenFB) {
